@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>My Portfolio</title>
+        <style>
+            .header-content{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 80px 80px;
+                margin: 30px;
+            }
+
+            .text p {
+               font-size: 35px;
+            }
+
+            .text h1 {
+                font-size: 45px;
+            }
+
+            .text h2 {
+                font-size: 25px;
+            }
+
+            span{
+                color: #4afa0a;
+            }
+            .icons{
+                display: flex;
+                gap: 30px;
+                margin-top: 30px;
+            }
+
+            .icons i{
+                font-size: 30px;
+                border-radius: 50px;
+                cursor: pointer;
+                transition: 0.5s;
+            }
+            .icons i:hover{
+                color: var(--pink-color);
+            }
+
+            .btn{
+                display: inline-block;
+                padding: 15px 40px;
+                border: 2px solid var(--pink-color);
+                border-radius: 25px;
+                color: #fff;
+                text-decoration: none;
+                margin-top: 30px;
+                transition: 0.5s;
+                align-items: center;
+                text-align: center;
+            }
+
+            .btn:hover{
+                background-color: var(--white-color);
+            }
+
+            .logo span{
+                color: var(--pink-color);
+            }
+
+            #menu-icon{
+                font-size: 30px;
+                margin-right: 20%;
+                display: none;
+            }
+            :root {
+    --pink-color: #ff69b4; /
+}
+
+.navbar {
+    display: inline-block; 
+    padding: 8px 12px;
+    align-items: center; 
+    flex-direction: row;
+}
+
+.navbar a {
+    margin: 0 12px; 
+    text-decoration:none;
+    color: #fff;
+    font-size: 18px;
+    transition: 0.5s;
+    display: inline-block;
+}
+
+.navbar a:hover {
+    background-color: var(--pink-color);
+}
+
+            .active{
+                background-color: var(--pink-color);
+            }
+
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Poppins", sans-serif;
+                scroll-behavior: smooth;
+            }
+            :root{
+                --bg-color: #060462;
+                --second-bg: #273d66;
+                --pink-color: #fa06e6;
+            }
+            body{
+                background-color: var(--bg-color);
+                color: #fff;
+            }
+
+            section{
+                padding: 2% 6%;
+            }
+             header{
+                position: sticky;
+                top: 0;
+                width: 100%;
+                z-index: 100;
+                background: var(--second-bg);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 2% 6%;
+             }
+             .logo{
+                font-size: 30px;
+                font-weight: 700;
+                text-decoration: none;
+                color: #fff;
+             }
+             img{
+                width: 250px;
+                height: 250px;
+                border-radius: 50%;
+                margin-right: 30px;
+                object-fit: cover;
+                border-color: var(--bg-color);
+                text-align: center;
+                margin-top: 10px;
+                margin-bottom: 40px;
+                margin-bottom: 10px;  
+                border: bold;
+             }
+             li{
+                list-style: none !important;
+                display: inline-block;
+             }
+             li a{
+                color: #fa06e6;
+                margin: 25px;
+             }
+             .btn{
+                background-color: var(--pink-color);
+                margin-left: 10px;
+                border-radius: 10px;
+                padding: 10px;
+             }
+             p{
+                margin-bottom: 20px;
+                line-height: 1.8;
+                font-size: 18px;
+                text-align: center;
+                letter-spacing: 1px;
+                transition: 0.5s;
+                text-decoration: none;
+                color: var(--pink-color);
+             }
+
+             selection{
+                padding-top: 20px;
+                background-color: black !important;
+                color: #fff;
+             }
+             selection h1{
+                margin-left: 20px;
+             }
+             h2{
+                font-size: 2rem;
+                margin-bottom: 10px;
+             }
+             .left{
+                margin-left: 10px;
+                justify-content: space-between;
+             }
+             #user-men{
+              
+                margin: 10px 45%;
+                color: rgb(58, 58,161);
+             }
+             .welcome-heading{
+                font-size: 1.1rem;
+                text-align: center;
+                text-transform: capitalize;
+                color: rgb(91, 129, 241);
+             }
+             .dkp-heading{
+                text-transform: uppercase;
+             }
+             .dtn-container{
+                margin: 40px 20px;
+             }
+             .dtn-container i{
+                margin-right: 8px;
+             }
+             .social-media-login{
+             text-decoration: none;
+             padding: 8px 15px;
+             background-color: #39569c;
+             color: #fff;
+             border-radius: 20px;
+             margin-left: 10px;
+             }
+
+             .social-media-login1{
+                text-decoration: none;
+                padding: 8px 15px;
+                background-color: #ec5574;
+                color:#fff;
+                border-radius: 20px;
+                margin-left: 10px;
+             }
+             .underline-container{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                margin: 15px 42px;
+             }
+             .underline {
+                width: 80px;
+                height: 2px;
+                background-color: rgb(161, 161, 161) !important;
+
+             }
+             .or-heading{
+                text-align: center;
+                margin-top: -10px;
+                padding: 0px 10px;
+             }
+             .input-box{
+                width: 220px;
+                height: 30px;
+                margin: 10px 30px;
+                border-radius: 40px;
+                outline: none;
+                border: none;
+                box-shadow: 10px 10px 13px;
+                padding-left: 10px;
+             }
+             .input-box1{
+                width: 220px;
+                height: 30px;
+                margin: 10px 30px;
+                border-radius: 40px;
+                outline: none;
+                border: none;
+                box-shadow: 10px 10px 13px;
+               padding-left: 10px;
+             }
+             .login-btn{
+                margin: 30px;
+                padding: 8px 92px;
+                background-image: linear-gradient(to left,rgb(170,170,241),rgb(39,39,250));
+                border-radius: 40px;
+                text-decoration: none;
+                color: #ffffff;
+                text-transform: capitalize;
+             }
+             .forgrt-password{
+                position: absolute;
+                margin: 20px 70px;
+                text-decoration: none;
+                font-weight: bold;
+             }
+             .register{
+                position: absolute;
+                margin-top: 40px;
+                font-size: 0.8rem;
+                padding: 10px 20px;
+             }
+             .register-now{
+              text-decoration: none;
+             color: #fff;
+             margin-left: 10px;
+             font-size: 0.8rem;
+             font-weight: bold;
+             }
+             .input-container{
+                text-align: center;
+                margin-top: 10px;
+                margin-bottom: 40px;
+                margin-bottom: 10px;    
+
+             }
+             .forgot-password{
+                text-align: center;
+                margin-top: 10px;
+                margin-bottom: 40px;
+                margin-bottom: 10px;  
+            }
+        .p{
+        text-align: center;
+                margin-top: 10px;
+                margin-bottom: 40px;
+                margin-bottom: 10px;  
+        }
+        .dtn-container{
+                text-align: center;
+                margin-top: 10px;
+                margin-bottom: 40px;
+                margin-bottom: 10px;  
+        }
+        .left{
+            display: inline-block;
+        }
+        .right{
+            text-align: center;
+                margin-top: 10px;
+                margin-bottom: 40px;
+                margin-bottom: 10px;  
+        }
+        .main-sec{
+            position: relative;
+            width: 100%;
+            z-index: 1;
+            height: 100vh;
+            background-image: url(C:\Users\straw\OneDrive\Pictures\20240414_100626.heic);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .main-sec .logo{
+            position: absolute;
+            text-transform: uppercase;
+            color: white;
+            font-size: 1.5em;
+            font-weight: 700;
+            right: 20px;
+            top: 20px;
+        }
+        .shadow{
+            position: absolute;
+            height: 100%;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.7);
+            transition: all 0.5s ease-in-out;
+            opacity: 0;
+            z-index: 3;
+        }
+        .shadow_opac{
+            opacity: 1;
+        }
+        .menu-container{
+            position: absolute;
+            width: 70%;
+            height: 100%;
+            left: -70%;
+            top: 0;
+            z-index: 10;
+            background: #fff;
+            transition: all 0.5s ease;
+        }
+        .active{
+            left: 0;
+        }
+        .menu-container .bg-image{
+            position: relative;
+            width: 100%;
+            height: 60px;
+            background-color: #0984e3;
+            box-shadow: 0 3px 4px -1px rgba(0,0,0,0.25);
+        }
+        .menu-container p{
+            position: absolute;
+            top: 18px;
+            left: 20px;
+            text-transform: uppercase;
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #fff;
+        }
+        .menu-line{
+            width: 40px;
+            height: 40px;
+            position: relative;
+            top: 10px;
+            left: 110%;
+            z-index: 999;
+            transition: o.5s ease;
+        }
+        .line{
+            left: 73%;
+        }
+        .menu-line div{
+            position: absolute;
+            width: 30px;
+            height: 5px;
+            background: #fff;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 3px;
+            transition: o.5s ease;
+
+        }
+        .menu-line.opacity div{
+            background: transparent;
+
+        }
+        .menu-line.opacity div:before{
+            top: 0;
+            transform: rotate(45deg);
+        }
+        .menu-line.opacity div:after{
+            bottom: 0;
+            transform: rotate(-45deg);
+        }
+        .menu-line div:before,.menu-line div:after,.menu-line div:after{
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 5px;
+            background: #fff;
+            border-radius: 3px;
+            left: 50%;
+            transition: o.5s ease;
+        }
+        .menu-line div:before{
+            top: -10px;
+        
+        }
+        .menu-line div:after{
+            top: -10px;
+        
+        }
+
+        .menu-container ul li a{
+            position: relative;
+            width: 100%;
+            line-height: 50px;
+            margin-left: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            color: #000;
+            transition: all 0.5s ease;
+        }
+        .menu-container ul li a{
+         margin-right: 30px;
+         font-size: 16px;
+         color: #828282;
+
+        }
+        .menu-container ul li:first-child{
+            margin-top: 10px;
+        }
+        .menu-container ul li:nth-child(6){
+            margin-top: 10px;
+            border-top: 1px solid #aaa;
+            padding: 10px;
+
+        }
+        .menu-container ul li a{
+            position: relative;
+            width: 100%;
+            line-height: 50px;
+            margin-left: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            color: #000;
+            transition: all 0.5s ease;
+        }
+        .menu-container ul li a i{
+            margin-left: 30px;
+            font-size: 16px;
+            color: #828282;
+        }
+        .menu-container ul li:first-child{
+            margin-top: 10px;
+        }
+        .menu-container ul li:nth-child(6){
+            margin-top: 10px;
+            border-top:1px solid #aaa;
+            padding-top: 10px;
+
+        }
+        .menu-container ul li:hover{
+            margin-left: 40px;
+        }
+      
+      p{
+        font-size: 16px;
+        align-items:center;
+        text-align: start;
+      }
+        </style>
+    </head>
+    <body>
+
+        <header>
+            <a href="#home" class="logo">Port <span>folio</span></a>
+            <i class="bx bx-menu" id="menu-icon"></i>
+            <div class="navbar">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#location">Location</a></li>
+                </ul>
+            </div>
+            
+        </header>
+        <div class="header-content" id="home">
+            <div class="text">
+                <p>Hello, Everyone <span>My Portfolio</span></p>
+                <h1>Web Developer</h1>
+                <h2>Coding Life<span class="effet-text"></span></h2>
+                <div class="icons">
+                    <i class="bx bxl-instagram"><a href="https://www.instagram.com/?hl=en" class="btn" hieght="10%" weight="10%">Insta</a></i>
+                    <i class="bx bxl-facebook"><a href="https://www.facebook.com/" class="btn">FB</a> </i>
+                    <i class="bx bxl-tiktok"><a href="https://www.tiktok.com/login" class="btn">TT</a></i>
+                    <i class="bx bxl-youtube"><a href="https://www.youtube.com/feed/you" class="btn">YT</a></i>
+                </div>
+                <a href="C:\Users\straw\OneDrive\Pictures\20240414_100626.heic" download class="btn">My photo</a>
+            </div>
+            <img src="C:\Users\straw\OneDrive\Pictures\20240414_100626.heic" class="header-img" alt="Image" height="20px" width="30px">
+        </div>
+       <selection>
+        <h1>Web Developer</h1>
+        <div class="container">
+            <div class="left">
+                <p>A web developer is a programmer who specializes in the development of applicationd and services for the World Wide Web.They 
+                    often work on the both the forntend (slient-side)and backend(Server-side)of web applications.Web developer is the process
+                    of making web applications and webpage. The web developer is responsible for making web applications that help the people to
+                    access the internet, browse the web, and interact with online services.</p>
+                </p>
+            </div>
+            <div class="right">
+             <img src="C:\Users\straw\OneDrive\Pictures\web-developer-definition-skills-and-responsibilities-908401.png" />
+            </div>
+        </div>
+       </selection>
+       <div class="container">
+        <i id="user-men" class="fa fa-user-plus" aria-hidden="true"></i>
+        <h2 class="welcome-heading">Welcome to <span class="dkp-heading"></span> login</h2>
+        <br>
+        <div class="dtn-container">
+            <a class="social-media-login" href="#"><i class="fa fa-facebook" aria-hidden="true"></i> facebook</a>
+            <a class="social-media-login" href="#"><i class="fa fa-google" aria-hidden="true"></i> Google</a>
+
+        </div>
+        <br>
+        <div class="underline-container">
+            <div class="underline-container"></div>
+            <div class="underline"></div>
+            <p class="or-heading">Or</p>
+            <div class="underline"></div>
+        </div>
+        <div  class="input-container">
+            <input class="input-box" type="text" placeholder="username"><br>
+            <br>
+            <input class="input-box" type="password" placeholder="password"><br>
+            <br>
+            <a class="login-btn" href="#">Login</a>
+        </div>
+        <br>
+        <div class="forgot-password">
+            <a href="#">Forgot Password?</a>
+            <p class="register">Dont have an Account
+            <a class="Register-Now" href="#">Register Now</a></p>
+       </div>
+       <div class="menu-container">
+        <div class="bg-image">
+            <div class="menu-line">
+                <div></div>
+            </div>
+        </div>
+     
+
+    </body>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.menu-line').click(function(){
+                $('.menu-container').toogleClass('active');
+                $('.menu-line').toggleClass('line');
+                $('.menu-line').toggleClass('opacity');
+                $('.shadow').toggleClass('shadow_opac');
+            })
+        });
+    </script>
+</html>
